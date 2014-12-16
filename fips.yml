@@ -5,7 +5,10 @@ imports:
     fips-hello-dep2:
         dep1: dep1
 
-
+# define exports 
+exports:
+    # name of export, and location of its CMakeLists.txt
+    dep1: src/dep1
 
 
 
