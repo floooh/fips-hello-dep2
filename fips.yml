@@ -2,7 +2,7 @@
 ---
 imports:
     # test a cyclic dependency 
-    fips-hello-world2:
+    fips-hello-dep2:
         dep1: dep1
 
 
