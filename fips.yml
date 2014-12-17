@@ -1,9 +1,8 @@
-# fips.yml template
 ---
-# define exports 
 exports:
-    # name of export, and location of its CMakeLists.txt
-    dep2: src/dep2
+    header-dirs: [ src ]    
+    modules :
+        dep2: src/dep2
 
 
 
