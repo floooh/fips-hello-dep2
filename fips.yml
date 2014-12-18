@@ -1,6 +1,9 @@
 ---
 exports:
     header-dirs: [ src ]    
+    defines :
+        TEST_DEFINE_1: 1
+        TEST_DEFINE_2: "Bla"
     modules :
         dep2: src/dep2
 
