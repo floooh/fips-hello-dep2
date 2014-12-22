@@ -1,7 +1,6 @@
 ---
 exports:
     header-dirs: [ src ]    
-    generator-dirs: [ generators ]
     defines :
         TEST_DEFINE_1: 1
         TEST_DEFINE_2: "Bla"
