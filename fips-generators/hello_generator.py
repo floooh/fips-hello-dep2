@@ -20,14 +20,11 @@ def generateSource(func_name, msg, srcPath) :
         f.write('}')
 
 #-------------------------------------------------------------------------------
-def generate(directory, name, func_name, msg) :
-    selfPath = directory + name + '.py'
-    hdrPath = directory + name + '.h'
-    srcPath = directory + name + '.cc'
-    if util.isDirty([selfPath], Version, hdrPath, srcPath) :
-        print '## generating {}'.format(hdrPath)        
-        generateHeader(func_name, msg, hdrPath)
-        print '## generating {}'.format(srcPath)        
-        generateSource(func_name, msg, srcPath)
+def generate(input, out_src, out_hdr, func_name, msg) :
+    if util.isDirty(Version, [input], [out_src, out_hdr]) :
+        print '## generating {}'.format(out_hdr)        
+        generateHeader(func_name, msg, out_hdr)
+        print '## generating {}'.format(out_src)        
+        generateSource(func_name, msg, out_src)
     else :
-        print '## nothing to do for {}'.format(selfPath)
+        print '## nothing to do for {}'.format(input)
