@@ -22,9 +22,9 @@ def generateSource(func_name, msg, srcPath) :
 #-------------------------------------------------------------------------------
 def generate(input, out_src, out_hdr, func_name, msg) :
     if util.isDirty(Version, [input], [out_src, out_hdr]) :
-        print '## generating {}'.format(out_hdr)        
+        print('## generating {}'.format(out_hdr))
         generateHeader(func_name, msg, out_hdr)
-        print '## generating {}'.format(out_src)        
+        print('## generating {}'.format(out_src))
         generateSource(func_name, msg, out_src)
     else :
-        print '## nothing to do for {}'.format(input)
+        print('## nothing to do for {}'.format(input))
